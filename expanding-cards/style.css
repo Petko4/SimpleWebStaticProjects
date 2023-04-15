@@ -23,7 +23,7 @@ body {
   width: 100%;
 }
 
-.collapsed {
+.panel {
   border-radius: 50px;
   cursor: pointer;
   height: 80vh;
@@ -32,6 +32,6 @@ body {
   width: 100px;
 }
 
-.collapsed.active {
+.panel.active {
   width: 60%;
 }

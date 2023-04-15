@@ -5,11 +5,17 @@
 //   event.srcElement.classList.add("active");
 // });
 
-const collapsed = document.getElementsByClassName("collapsed");
+const panels = document.querySelectorAll(".panel");
 
-[...collapsed].forEach((el) =>
+panels.forEach((el) =>
   el.addEventListener("click", (event) => {
-    [...collapsed].forEach((img) => img.classList.remove("active"));
+    removeActiveClass();
     el.classList.add("active");
   })
 );
+
+function removeActiveClass() {
+  panels.forEach((panel) => {
+    panel.classList.remove("active");
+  });
+}
